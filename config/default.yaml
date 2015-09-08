@@ -1,0 +1,43 @@
+###
+# default.yaml - Default settings
+#
+# By default, anytime Puppet is run, the /etc/puppet/hiera.yaml config file will load
+# the settings in BOTH the "default.yaml" and "local.yaml". The settings in "local.yaml"
+# will always override the default settings.
+###
+
+#-----------------------------
+# Vagrant Settings
+#-----------------------------
+# Name of the VM to create in VirtualBox
+#(Also the name of the subfolder in ~/VirtualBox VMs/ where this VM is normally kept)
+# (Changes to this setting require a 'vagrant destroy && vagrant up' to take effect)
+vm_name    : 'pmltq'
+
+# How much memory to provide to VirtualBox VM (in MB)
+# Provide 2GB of memory by default
+# (Changes to this setting require a 'vagrant reload' to take effect)
+vm_memory  : 512
+
+# Maximum amount of host CPU which VirtualBox VM can use (in %)
+# The example below would only let VM use up to 50% of host CPU
+# (Changes to this setting require a 'vagrant reload' to take effect)
+vm_max_cpu : 100
+
+# Local IP address which will refer to this VM
+# (Changes to this setting require a 'vagrant reload' to take effect)
+ip_address : 33.33.33.78
+
+# Local port which will access service on this VM
+port       : 9999
+
+sync_src_to_host : true
+
+# Default Vagrant "box" to use. This should be an Ubuntu box (12.04 or 14.04 recommended)
+# (Changes to these settings require a 'vagrant destroy && vagrant up' to take effect)
+vagrant_box      : "ubuntu/trusty64"
+
+# Boot VM into GUI mode (login: vagrant, pwd: vagrant). Useful for debugging VM boot issues, etc.
+# By default this is disabled as it can be memory hungry, and SSH is usually all you need.
+# (Changes to this setting require a 'vagrant reload' to take effect)
+vm_gui_mode     : false

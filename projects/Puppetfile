@@ -1,0 +1,19 @@
+# Configuration for librarian-puppet (http://librarian-puppet.com/)
+# This installs necessary third-party Puppet Modules for us.
+#
+# Executed by
+#   librarian-puppet install --clean
+#
+
+# Default location for all modules, PuppetForge
+forge "https://forgeapi.puppetlabs.com"
+
+mod 'puppetlabs-stdlib'
+mod 'puppetlabs-postgresql'
+mod 'bashtoni-timezone'
+mod 'jhoblitt-perlbrew'
+mod 'puppetlabs-vcsrepo'
+mod 'maestrodev-wget'
+mod 'camptocamp-archive'
+mod 'example42-php'
+mod 'jfryman-nginx'
